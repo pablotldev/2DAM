@@ -15,13 +15,14 @@ public class Main {
 
       System.out.print("Introduce un número y yo te diré sus divisores: ");
       int n = Integer.parseInt(BR.readLine());
+      int m = 0;
 
-      System.out.printf("--- Divisores de %d ---%n", n);
       for (int i = 1; i <= n; i++) {
         if (n % i == 0) {
-          System.out.printf("- %d %n", i);
+          m++;
         }
       }
+      System.out.printf("Número de divisores de %d: %d%n", n, m);
 
     } catch (NumberFormatException e) {
       System.err.println("Introduce un formato numérico válido.");

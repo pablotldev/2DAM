@@ -1,0 +1,11 @@
+[package]
+name = "random"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "random"
+path = "src/ejercicio3/random.rs"
+
+[dependencies]
+rand = "0.9"
