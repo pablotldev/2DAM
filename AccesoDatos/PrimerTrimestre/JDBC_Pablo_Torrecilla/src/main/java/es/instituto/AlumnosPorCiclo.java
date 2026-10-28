@@ -14,10 +14,14 @@ public class AlumnosPorCiclo {
     try (Connection con = ConexionInicial.getConnection(); PreparedStatement ps = con.prepareStatement(FILTRO)) {
       ps.setString(1, ciclo);
       try (ResultSet rs = ps.executeQuery()) {
+        boolean success = false;
         while (rs.next()) {
+          success = true;
           System.out.printf("ID: %d - Nombre: %s - Edad: %d - Ciclo: %s%n", rs.getInt(1), rs.getString(2), rs.getInt(3),
               rs.getString(4));
         }
+        if (!success)
+          System.out.printf("No hay resultados para el ciclo %s%n", ciclo);
       }
     } catch (SQLException e) {
       System.err.printf("Error de filtrado: %s%n", e.getMessage());

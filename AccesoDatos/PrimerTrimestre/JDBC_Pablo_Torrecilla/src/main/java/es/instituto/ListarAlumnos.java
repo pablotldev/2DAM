@@ -9,7 +9,7 @@ public class ListarAlumnos {
   private static final String SQL = "SELECT id, nombre, edad, ciclo FROM alumnos ORDER BY id";
 
   public static void selectAlumnos() {
-System.out.println("---- Ejercicio 2 ----");
+    System.out.println("---- Ejercicio 2 ----");
     try (Connection con = ConexionInicial.getConnection();
         PreparedStatement ps = con.prepareStatement(SQL);
         ResultSet rs = ps.executeQuery();) {
