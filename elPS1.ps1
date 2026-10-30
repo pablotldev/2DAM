@@ -1,4 +1,4 @@
-#! Pegar en $PROFILE
+#! Pegar en $PROFILE y cambiar alguna cosilla
 
 oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/zash.omp.json' | Invoke-Expression
 Import-Module -Name Terminal-Icons
@@ -45,8 +45,11 @@ Register-ArgumentCompleter -CommandName c -ParameterName destino -ScriptBlock {
 } 
 
 function p { g && c . && pnpm dev }
+
 function m { mvn @args }
 function mcc { m clean compile }
 function mjr { m javafx:run }
 function mdt { m dependency:tree }
 function mt { m test }
+function mvd { m versions:display-dependency-updates }
+function mvu { m versions:use-latest-releases }

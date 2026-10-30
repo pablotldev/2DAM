@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import es.instituto.utils.Colors;
 import io.github.cdimascio.dotenv.Dotenv;
 
 public final class ConexionInicial {
@@ -16,7 +17,7 @@ public final class ConexionInicial {
         env.get("DB_USER"),
         env.get("DB_PASSWORD"));
 
-    System.out.printf("Conexión establecida en la DB: %s.%n", con.getCatalog());
+    System.out.printf("%sConexión establecida en la DB: %s.%s%n", Colors.GREEN, con.getCatalog(), Colors.RESET);
     return con;
   }
 }
