@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
@@ -36,12 +37,12 @@ public class CrearAlumno {
       }
       ps.setString(1, nombre);
 
-      System.out.print(Colors.BLUE + "Introduce la edad: " + Colors.WHITE);
+      System.out.print(Colors.BLUE + "Introduce la edad (>=18): " + Colors.WHITE);
       String edad;
       while (true) {
         edad = bR.readLine();
-        if (edad == null || !edad.matches("\\d+")) {
-          System.out.print(Colors.RED + "Introduce una edad válida: " + Colors.WHITE);
+        if (edad == null || !edad.matches("\\d+") || Integer.parseInt(edad) < 18) {
+          System.out.print(Colors.RED + "Introduce una edad válida (>18): " + Colors.WHITE);
           continue;
         }
         break;
@@ -53,18 +54,28 @@ public class CrearAlumno {
       while (true) {
         ciclo = bR.readLine();
         if (ciclo == null || ciclo.isBlank() || !ciclo.matches("\\p{L}+")
-            || !List.of("dam", "daw").contains(ciclo.toLowerCase())) {
+            || !List.of("DAM", "DAW").contains(ciclo.toUpperCase())) {
           System.out.print(Colors.RED + "Introduce un ciclo válido (dam o daw): " + Colors.WHITE);
           continue;
         }
         break;
       }
-      ps.setString(3, ciclo);
+      ps.setString(3, ciclo.toUpperCase());
 
       int update = ps.executeUpdate();
 
-      System.out.printf(Colors.GREEN + "Se %s insertado %d %s. El ID autogenerado es %d.%n",
-          update > 1 ? "han" : "ha", update, update > 1 ? "líneas" : "línea", ps.getGeneratedKeys());
+      long id = -1;
+      ResultSet keys = ps.getGeneratedKeys();
+      while (keys.next())
+        id = keys.getLong(1);
+
+      System.out.printf("%sSe %s insertado %d %s. El ID autogenerado es %d.%s%n",
+          Colors.GREEN,
+          update > 1 ? "han" : "ha",
+          update,
+          update > 1 ? "líneas" : "línea",
+          id,
+          Colors.RESET);
 
     } catch (IOException e) {
       System.err.printf("%sError en la creación del nuevo alumno. %s%s%n", Colors.RED, e.getMessage(), Colors.RESET);
