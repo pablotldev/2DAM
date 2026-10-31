@@ -8,6 +8,9 @@ import es.instituto.utils.Colors;
 
 public class Main {
 
+  private Main() {
+  }
+
   private static void menu() {
     try (BufferedReader bR = new BufferedReader(new InputStreamReader(System.in))) {
       String salir;
@@ -23,8 +26,9 @@ public class Main {
           case 1 -> CrearAlumno.crear();
           case 2 -> BuscadorParam.buscar();
           case 3 -> ModificarAlumno.update();
+          case 4 -> EliminarAlumno.delete();
         }
-      } while (salir.toLowerCase().equals("salir"));
+      } while (!salir.toLowerCase().equals("salir"));
     } catch (IOException e) {
       System.err.printf("%sError en el menú: %s%s%n", Colors.RED, e.getMessage(), Colors.RESET);
     }
@@ -33,6 +37,6 @@ public class Main {
 
   public static void main(String[] args) {
     menu();
-
+    System.out.println(Colors.RED + "Ha salido del programa." + Colors.RESET);
   }
 }

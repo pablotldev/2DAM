@@ -15,6 +15,9 @@ public class BuscadorParam {
 
   private static final String SQL = "SELECT * FROM alumnos WHERE ciclo = ? AND edad > ?;";
 
+  private BuscadorParam() {
+  }
+
   public static void buscar() {
 
     try (BufferedReader bR = new BufferedReader(new InputStreamReader(System.in));

@@ -11,6 +11,9 @@ public final class ConexionInicial {
 
   private static final Dotenv env = Dotenv.load();
 
+  private ConexionInicial() {
+  }
+
   public static Connection getConnection() throws SQLException {
     Connection con = DriverManager.getConnection(
         env.get("DB_URL"),

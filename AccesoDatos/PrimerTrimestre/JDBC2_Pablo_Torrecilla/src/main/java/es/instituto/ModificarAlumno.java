@@ -16,6 +16,9 @@ public class ModificarAlumno {
   private static final String SEARCH = "SELECT * FROM alumnos WHERE id = ?;";
   private static final String UPDATE = "UPDATE alumnos SET ciclo = ? WHERE id = ?";
 
+  private ModificarAlumno() {
+  }
+
   public static void update() {
 
     try (BufferedReader bR = new BufferedReader(new InputStreamReader(System.in));
@@ -36,7 +39,6 @@ public class ModificarAlumno {
               Colors.RESET);
         }
       }
-      // Añadir algo del estilo "Datos actuales: <mostrar datos>" y en caso de actualizarlos mostrar solo lo que se ha cambiado como "nombre nuevo: <nombre>"
       System.out.print(Colors.BLUE + "Introduce el ID del alumno al que se le cambiará el ciclo: " + Colors.WHITE);
       String id;
       while (true) {
@@ -68,8 +70,16 @@ public class ModificarAlumno {
               Colors.RED, id, Colors.RESET);
           return;
         }
-        
+
         String ciclo = "DAW".equals(ciclo_og) ? ciclo_og : "DAM";
+        update.setString(1, ciclo);
+        update.executeUpdate();
+        System.out.printf("%sSe ha cambiado el ciclo %s por %s correctamente.%s%n",
+            Colors.GREEN,
+            ciclo_og,
+            ciclo,
+            Colors.RESET);
+
       }
 
       update.executeUpdate();
