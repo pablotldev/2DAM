@@ -12,21 +12,21 @@ public class Main {
   }
 
   private static void menu() {
-    try (BufferedReader bR = new BufferedReader(new InputStreamReader(System.in))) {
+    try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
       String salir;
       do {
         System.out.print(Colors.BLUE + "1.- Crear Alumno\n2.- Buscar Alumno\n3.- Modificar Alumno\n4.- Eliminar Alumno"
             + Colors.WHITE);
-        salir = bR.readLine();
+        salir = reader.readLine();
         if (salir == null || salir.isBlank() || !salir.matches("\\d+")) {
           System.out.println(Colors.RED + "Introduce un valor válido." + Colors.RESET);
           continue;
         }
         switch (Integer.parseInt(salir)) {
-          case 1 -> CrearAlumno.crear();
-          case 2 -> BuscadorParam.buscar();
-          case 3 -> ModificarAlumno.update();
-          case 4 -> EliminarAlumno.delete();
+          case 1 -> CrearAlumno.crear(reader);
+          case 2 -> BuscadorParam.buscar(reader);
+          case 3 -> ModificarAlumno.update(reader);
+          case 4 -> EliminarAlumno.delete(reader);
         }
       } while (!salir.toLowerCase().equals("salir"));
     } catch (IOException e) {

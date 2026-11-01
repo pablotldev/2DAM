@@ -2,7 +2,6 @@ package es.instituto;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,20 +13,19 @@ import es.instituto.utils.Colors;
 
 public class CrearAlumno {
 
-  private static final String INSERT = "INSERT INTO alumnos (nombre, edad, ciclo) VALUES (?, ?, ?);";
+  private static final String INSERT = "INSERT INTO alumnos (nombre, edad, ciclo) VALUES (?, ?, ?)";
 
   private CrearAlumno() {
   }
 
-  public static void crear() {
-    try (BufferedReader bR = new BufferedReader(new InputStreamReader(System.in));
-        Connection con = ConexionInicial.getConnection();
+  public static void crear(BufferedReader reader) {
+    try (Connection con = ConexionInicial.getConnection();
         PreparedStatement ps = con.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)) {
 
       System.out.print(Colors.BLUE + "Introduce el nombre del alumno: " + Colors.WHITE);
       String nombre;
       while (true) {
-        nombre = bR.readLine();
+        nombre = reader.readLine();
         // Con String.matches("\\p{L}") indica que es una letra. El paréntesis extra indica que es opcional, permitiendo así nombres compuestos o simples
         if (nombre == null || nombre.isBlank() || !nombre.matches("\\p{L}+( \\p{L}+)*")) {
           System.out.print(Colors.BLUE + "Introduce un nombre válido: " + Colors.WHITE);
@@ -40,7 +38,7 @@ public class CrearAlumno {
       System.out.print(Colors.BLUE + "Introduce la edad (>=18): " + Colors.WHITE);
       String edad;
       while (true) {
-        edad = bR.readLine();
+        edad = reader.readLine();
         if (edad == null || !edad.matches("\\d+") || Integer.parseInt(edad) < 18) {
           System.out.print(Colors.RED + "Introduce una edad válida (>18): " + Colors.WHITE);
           continue;
@@ -52,7 +50,7 @@ public class CrearAlumno {
       System.out.print(Colors.BLUE + "Por último, introduce el ciclo del alumno (dam o daw): " + Colors.WHITE);
       String ciclo;
       while (true) {
-        ciclo = bR.readLine();
+        ciclo = reader.readLine();
         if (ciclo == null || ciclo.isBlank() || !ciclo.matches("\\p{L}+")
             || !List.of("DAM", "DAW").contains(ciclo.toUpperCase())) {
           System.out.print(Colors.RED + "Introduce un ciclo válido (dam o daw): " + Colors.WHITE);

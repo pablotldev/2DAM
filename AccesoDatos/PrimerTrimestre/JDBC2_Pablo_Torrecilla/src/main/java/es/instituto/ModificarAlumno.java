@@ -2,7 +2,6 @@ package es.instituto;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,17 +11,16 @@ import es.instituto.utils.Colors;
 
 public class ModificarAlumno {
 
-  private static final String SQL = "SELECT * FROM alumnos;";
-  private static final String SEARCH = "SELECT * FROM alumnos WHERE id = ?;";
+  private static final String SQL = "SELECT * FROM alumnos";
+  private static final String SEARCH = "SELECT * FROM alumnos WHERE id = ?";
   private static final String UPDATE = "UPDATE alumnos SET ciclo = ? WHERE id = ?";
 
   private ModificarAlumno() {
   }
 
-  public static void update() {
+  public static void update(BufferedReader reader) {
 
-    try (BufferedReader bR = new BufferedReader(new InputStreamReader(System.in));
-        Connection con = ConexionInicial.getConnection();
+    try (Connection con = ConexionInicial.getConnection();
         PreparedStatement sql = con.prepareStatement(SQL);
         PreparedStatement search = con.prepareStatement(SEARCH);
         PreparedStatement update = con.prepareStatement(UPDATE);) {
@@ -42,7 +40,7 @@ public class ModificarAlumno {
       System.out.print(Colors.BLUE + "Introduce el ID del alumno al que se le cambiará el ciclo: " + Colors.WHITE);
       String id;
       while (true) {
-        id = bR.readLine();
+        id = reader.readLine();
         if (id == null || id.isBlank() || !id.matches("\\d+")) {
           System.out.print(Colors.RED + "Introduce un ID válido: " + Colors.WHITE);
           continue;

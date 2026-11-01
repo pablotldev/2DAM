@@ -2,7 +2,6 @@ package es.instituto;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,21 +12,20 @@ import es.instituto.utils.Colors;
 
 public class BuscadorParam {
 
-  private static final String SQL = "SELECT * FROM alumnos WHERE ciclo = ? AND edad > ?;";
+  private static final String SQL = "SELECT * FROM alumnos WHERE ciclo = ? AND edad > ?";
 
   private BuscadorParam() {
   }
 
-  public static void buscar() {
+  public static void buscar(BufferedReader reader) {
 
-    try (BufferedReader bR = new BufferedReader(new InputStreamReader(System.in));
-        Connection con = ConexionInicial.getConnection();
+    try (Connection con = ConexionInicial.getConnection();
         PreparedStatement ps = con.prepareStatement(SQL)) {
 
       System.out.print(Colors.BLUE + "Introduce el ciclo que quieras buscar (dam o daw): " + Colors.WHITE);
       String ciclo;
       while (true) {
-        ciclo = bR.readLine();
+        ciclo = reader.readLine();
         if (ciclo == null || ciclo.isBlank() || !ciclo.matches("\\p{L}+")
             || !List.of("DAW", "DAM").contains(ciclo.toUpperCase())) {
           System.out.print(Colors.RED + "Introduce un ciclo válido (dam o daw): " + Colors.WHITE);
@@ -40,7 +38,7 @@ public class BuscadorParam {
       System.out.print(Colors.BLUE + "Introduce la edad mínima por la que quieras filtrar (>=18): " + Colors.WHITE);
       String edad;
       while (true) {
-        edad = bR.readLine();
+        edad = reader.readLine();
         if (edad == null || edad.isBlank() || !edad.matches("\\d+") || Integer.parseInt(edad) < 18) {
           System.out.print(Colors.RED + "Introduce una edad válida (>=18): " + Colors.WHITE);
           continue;
