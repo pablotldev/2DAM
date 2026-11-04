@@ -1,0 +1,16 @@
+DROP DATABASE IF EXISTS Alumnos02;
+CREATE DATABASE Alumnos02;
+
+USE Alumnos02;
+
+CREATE TABLE alumno (
+  NIA INT PRIMARY KEY,
+  Nombre VARCHAR(40) NOT NULL,
+  Apellidos VARCHAR(70) NOT NULL,
+  Genero VARCHAR(9) NOT NULL,
+  Fecha_nacimiento DATE NOT NULL,
+  Ciclo VARCHAR(10) NOT NULL,
+  Curso VARCHAR(10) NOT NULL,
+  Grupo CHAR NOT NULL
+);
+

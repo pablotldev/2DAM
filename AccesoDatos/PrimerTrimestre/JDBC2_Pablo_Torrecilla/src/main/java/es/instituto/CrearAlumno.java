@@ -14,13 +14,15 @@ import es.instituto.utils.Colors;
 public class CrearAlumno {
 
   private static final String INSERT = "INSERT INTO alumnos (nombre, edad, ciclo) VALUES (?, ?, ?)";
+  private static final String SQL = "SELECT * FROM alumnos WHERE id = ?";
 
   private CrearAlumno() {
   }
 
   public static void crear(BufferedReader reader) {
     try (Connection con = ConexionInicial.getConnection();
-        PreparedStatement ps = con.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)) {
+        PreparedStatement ps = con.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS);
+        PreparedStatement sqlPs = con.prepareStatement(SQL)) {
 
       System.out.print(Colors.BLUE + "Introduce el nombre del alumno: " + Colors.WHITE);
       String nombre;
@@ -28,7 +30,7 @@ public class CrearAlumno {
         nombre = reader.readLine();
         // Con String.matches("\\p{L}") indica que es una letra. El paréntesis extra indica que es opcional, permitiendo así nombres compuestos o simples
         if (nombre == null || nombre.isBlank() || !nombre.matches("\\p{L}+( \\p{L}+)*")) {
-          System.out.print(Colors.BLUE + "Introduce un nombre válido: " + Colors.WHITE);
+          System.out.print(Colors.RED + "Introduce un nombre válido: " + Colors.WHITE);
           continue;
         }
         break;
@@ -74,6 +76,19 @@ public class CrearAlumno {
           update > 1 ? "líneas" : "línea",
           id,
           Colors.RESET);
+
+      sqlPs.setLong(1, id);
+      try (ResultSet sqlRs = sqlPs.executeQuery()) {
+        if (sqlRs.next()) {
+          System.out.printf("%sID: %d | Nombre: %s | Edad: %d | Ciclo: %s%s%n",
+              Colors.BLUE,
+              sqlRs.getInt("ID"),
+              sqlRs.getString("Nombre"),
+              sqlRs.getInt("Edad"),
+              sqlRs.getString("Ciclo"),
+              Colors.RESET);
+        }
+      }
 
     } catch (IOException e) {
       System.err.printf("%sError en la creación del nuevo alumno. %s%s%n", Colors.RED, e.getMessage(), Colors.RESET);

@@ -21,7 +21,7 @@ public class Main {
         salir = reader.readLine();
 
         if (salir == null || salir.isBlank() || !salir.matches("\\d+")) {
-          System.out.println(Colors.RED + "Introduce un valor válido." + Colors.RESET);
+          System.out.println(Colors.RED + "Introduce un valor válido.\n" + Colors.RESET);
           continue;
         }
 
