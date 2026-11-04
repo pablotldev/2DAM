@@ -52,4 +52,4 @@ function mjr { m javafx:run }
 function mdt { m dependency:tree }
 function mt { m test }
 function mvd { m versions:display-dependency-updates }
-function mvu { m versions:use-latest-releases }
+function mvu { m versions:use-latest-releases "-DallowMayorUpdates=false" }

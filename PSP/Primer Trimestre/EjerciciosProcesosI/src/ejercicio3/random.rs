@@ -1,5 +1,6 @@
 use rand::random_range;
 
 fn main() {
-    println!("Número aleatorio: {}", random_range(1..=10))
+    let x: i32 = random_range(0..=10);
+    println!("Número aleatorio: {}", x)
 }
