@@ -30,7 +30,7 @@ public final class ConnectionDB {
         env.get("DB_USER"),
         env.get("DB_PASSWORD"));
 
-    System.out.printf("%sConexión establecida a MySQL.%n", Colors.GREEN);
+    System.out.println(Colors.GREEN + "Conexión establecida a MySQL.");
     return con;
   }
 }

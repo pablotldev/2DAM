@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.SQLException;
 
+import es.instituto.classes.InsertarAlumno;
 import es.instituto.db.InitializeDB;
 import es.instituto.utils.Colors;
 
@@ -35,8 +36,8 @@ public class Main {
       System.out.println("8.- Guardar XML/JSON");
       System.out.println("9.- Leer XML/JSON");
       System.out.println("0.- Salir");
+      System.out.print("Introduce una opción: " + Colors.WHITE);
 
-      System.out.print("Introduce una opción: ");
       do {
         opt = reader.readLine();
         if (opt == null || opt.isBlank() || !opt.matches("\\d")) {
@@ -46,7 +47,9 @@ public class Main {
         break;
       } while (true);
 
-      
+      switch (Integer.parseInt(opt)) {
+        case 1 -> InsertarAlumno.crear(reader);
+      }
 
     } catch (IOException e) {
       System.err.printf("%sError de Entrada/Salida: %s", Colors.RED, e.getMessage());
