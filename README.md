@@ -6,18 +6,18 @@ Aquí está todo el material de **2º de DAM (Desarrollo de Aplicaciones Multipl
 
 Cada carpeta corresponde a una asignatura y dentro están las prácticas separadas por trimestre y semana.
 
-| Asignatura | Carpeta | Contenido |
-|---|---|---|
-| Programación de Servicios y Procesos | [`PSP/`](PSP/) | Java: hilos, ficheros, POO, actividad 1.3 (productor/consumidor) |
-| Acceso a Datos | [`AccesoDatos/`](AccesoDatos/) | Java: ficheros, CSV, binarios, serialización, XML y JSON |
-| Desarrollo de Interfaces | [`DesarrolloInterfaces/`](DesarrolloInterfaces/) | Maven + JavaFX |
-| Móviles | [`Moviles/`](Moviles/) | Kotlin + Gradle |
+| Asignatura                           | Carpeta                                          | Contenido                                                        |
+| ------------------------------------ | ------------------------------------------------ | ---------------------------------------------------------------- |
+| Programación de Servicios y Procesos | [`PSP/`](PSP/)                                   | Java: hilos, ficheros, POO, actividad 1.3 (productor/consumidor) |
+| Acceso a Datos                       | [`AccesoDatos/`](AccesoDatos/)                   | Java: ficheros, CSV, binarios, serialización, XML y JSON         |
+| Desarrollo de Interfaces             | [`DesarrolloInterfaces/`](DesarrolloInterfaces/) | Maven + JavaFX                                                   |
+| Móviles                              | [`Moviles/`](Moviles/)                           | Kotlin + Gradle                                                  |
 
 ---
 
 ## Estructura
 
-```
+```txt
 2DAM/
 ├── AccesoDatos/              Acceso a datos (1er trimestre completo)
 │   └── PrimerTrimestre/
@@ -47,13 +47,13 @@ Cada carpeta corresponde a una asignatura y dentro están las prácticas separad
 
 ## Requisitos
 
-| Herramienta | Versión | Para qué |
-|---|---|---|
-| JDK | 21 o superior | Todas las asignaturas |
-| Maven | 3.9+ | Desarrollo de Interfaces |
-| Gradle | 9.2 (wrapper) | Móviles |
-| Visual Studio Code | — | Editor, con *Extension Pack for Java* |
-| PowerShell 7 | — | Atajos de `elPS1.txt` |
+| Herramienta        | Versión       | Para qué                              |
+| ------------------ | ------------- | ------------------------------------- |
+| JDK                | 21 o superior | Todas las asignaturas                 |
+| Maven              | 3.9+          | Desarrollo de Interfaces              |
+| Gradle             | 9.2 (wrapper) | Móviles                               |
+| Visual Studio Code | —             | Editor, con _Extension Pack for Java_ |
+| PowerShell 7       | —             | Atajos de `elPS1.txt`                 |
 
 El JDK 25 lo usan los proyectos de JavaFX. `actividad1javafx` se queda en JavaFX 21 por compatibilidad.
 
@@ -63,7 +63,7 @@ El JDK 25 lo usan los proyectos de JavaFX. `actividad1javafx` se queda en JavaFX
 
 ### Acceso a datos y PSP
 
-Son ejercicios sueltos, sin build system. Se compilan y ejecutan desde VS Code (botón *Run* sobre el fichero) o a mano:
+Son ejercicios sueltos, sin build system. Se compilan y ejecutan desde VS Code (botón _Run_ sobre el fichero) o a mano:
 
 ```powershell
 cd AccesoDatos\PrimerTrimestre\EjerciciosFile\src
@@ -86,12 +86,12 @@ mvn test                # solo holajavafx2, que tiene JUnit
 
 Cada proyecto declara su `mainClass` en el `javafx-maven-plugin`:
 
-| Proyecto | Main | JavaFX |
-|---|---|---|
-| `actividad1javafx` | `es.ieslazarocardenas.di.actividad1.App` | 21 |
-| `gestortareas` | `es.ies.gestortareas.App` | 25 |
-| `HolaJavaFX` | `es.ies.javafx.App` | 25 |
-| `holajavafx2` | `es.ies.javafx.App` | 25 |
+| Proyecto           | Main                                     | JavaFX |
+| ------------------ | ---------------------------------------- | ------ |
+| `actividad1javafx` | `es.ieslazarocardenas.di.actividad1.App` | 21     |
+| `gestortareas`     | `es.ies.gestortareas.App`                | 25     |
+| `HolaJavaFX`       | `es.ies.javafx.App`                      | 25     |
+| `holajavafx2`      | `es.ies.javafx.App`                      | 25     |
 
 ### Móviles (Gradle + Kotlin)
 
@@ -142,7 +142,7 @@ Las rutas están en `$HOME\Documents\2DAM`, hay que cambiarlas si el repo está 
 
 ## Notas del repositorio
 
-- `.gitignore` ignora `bin/`, `classes/`, `test-classes/`, `*.jar` y los comprimidos (`*.zip`, `*.rar`, `*.7z`). Los `.jar` del wrapper de Gradle están ya subidos, así que no se borran.
+- `.gitignore` ignora `bin/`, `test-classes/`, `*.jar` y los comprimidos (`*.zip`, `*.rar`, `*.7z`). Los `.jar` del wrapper de Gradle están ya subidos, así que no se borran.
 - Hay folders de `target/` y `build/` versionados por error; se pueden borrar del índice cuando quieras.
 - `.github/modernize/java-upgrade/` contiene los hooks de la herramienta de actualización de Java.
 - En `PSP/Torrecilla_Pablo_A1_3/` se usó IA (Claude, Gemini) para depurar y resolver dudas sobre el código.

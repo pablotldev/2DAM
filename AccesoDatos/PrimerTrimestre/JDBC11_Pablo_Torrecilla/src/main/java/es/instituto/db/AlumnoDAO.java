@@ -14,7 +14,7 @@ import es.instituto.models.Alumno;
 public class AlumnoDAO {
 
   private static final String INSERT = """
-      INSERT INTO alumnos (NIA, Nombre, Apellidos, Genero, Fecha_nacimiento, Ciclo, Curso, Grupo)
+      INSERT INTO alumno (NIA, Nombre, Apellidos, Genero, Fecha_nacimiento, Ciclo, Curso, Grupo)
       VALUES (?, ?, ?, ?, ?, ? , ?, ?)
       """;
   private static final String IMPORT = """

@@ -175,7 +175,7 @@ public class Input {
 
   public static Path leerRuta(BufferedReader reader, String msg, Path def) throws IOException {
     while (true) {
-      System.out.print(Colors.BLUE + msg + "[Enter = " + def + "]: " + Colors.WHITE);
+      System.out.print(Colors.BLUE + msg + " [Enter = " + def + "]: " + Colors.WHITE);
       String val = leerLinea(reader);
 
       if (val.isBlank()) {
@@ -187,6 +187,10 @@ public class Input {
         System.out.println(Colors.RED + "Ruta inválida.");
       }
     }
+  }
+
+  public static int leerOpcion(BufferedReader reader, int min, int max) throws IOException {
+    return leerEntero(reader, "Opción: ", "Opción inválida (" + min + " - " + max + "): ", min, max);
   }
 
 }
