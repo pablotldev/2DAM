@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.sql.SQLException;
 
 import es.instituto.classes.InsertarAlumno;
+import es.instituto.db.AlumnoDAO;
 import es.instituto.db.InitializeDB;
 import es.instituto.utils.Colors;
 
@@ -48,7 +49,7 @@ public class Main {
       } while (true);
 
       switch (Integer.parseInt(opt)) {
-        case 1 -> InsertarAlumno.crear(reader);
+        case 1 -> AlumnoDAO.ins;
       }
 
     } catch (IOException e) {
