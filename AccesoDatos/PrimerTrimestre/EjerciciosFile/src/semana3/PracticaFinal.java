@@ -105,7 +105,8 @@ public class PracticaFinal {
 
     try (BufferedReader bR = new BufferedReader(new FileReader(FILE.toFile()))) {
 
-      String str = bR.readLine();
+      String str; 
+      bR.readLine();
       while ((str = bR.readLine()) != null) {
 
         if (str.isBlank()) {

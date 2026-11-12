@@ -13,4 +13,3 @@ CREATE TABLE alumno (
   Curso VARCHAR(10) NOT NULL,
   Grupo CHAR NOT NULL
 );
-

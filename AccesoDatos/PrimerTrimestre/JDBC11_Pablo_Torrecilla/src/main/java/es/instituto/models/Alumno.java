@@ -11,5 +11,4 @@ public record Alumno(
     String ciclo,
     String curso,
     char grupo) {
-
 }
