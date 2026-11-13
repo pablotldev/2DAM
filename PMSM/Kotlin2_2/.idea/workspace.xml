@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3a5274f3-0ba5-4e1d-9078-f4a8a84e4bb5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Moviles/Kotlin2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/Kotlin2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/Kotlin2/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/Kotlin2/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/Kotlin2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/Kotlin2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/Kotlin2/Kotlin2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/Kotlin2/Kotlin2_EjerciciosClases.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/Kotlin2/src/Ejercicio1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/Kotlin2/src/Ejercicio2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/Kotlin2/src/utils/Colors.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/.kotlin/errors/errors-1791461890341.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/.kotlin/errors/errors-1791461897353.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/app/src/main/kotlin/Ejercicio1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/app/src/main/kotlin/Ejercicio2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/app/src/main/kotlin/Ejercicio3.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/gradle/libs.versions.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/ejercicios/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Moviles/prueba/settings.gradle.kts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="7.626575112832075E-42" />
+      <entry key="MS500" value="6.758776329237994E-9" />
+      <entry key="S2" value="0.01408106556761785" />
+      <entry key="S5" value="0.27709767033648985" />
+      <entry key="S10" value="0.8474390537374451" />
+      <entry key="S30" value="3.0199489895318328" />
+      <entry key="S60" value="6.342603182836607" />
+      <entry key="M2" value="12.844400632870215" />
+      <entry key="M5" value="28.84439249153792" />
+      <entry key="M10" value="46.96248940590431" />
+      <entry key="M15" value="58.08626366616175" />
+      <entry key="M30" value="74.15613959480035" />
+      <entry key="H1" value="84.8704038444711" />
+      <entry key="H2" value="91.09703917633543" />
+      <entry key="H4" value="94.45894050593576" />
+      <entry key="D1" value="97.39692819762026" />
+      <entry key="W1" value="97.91352498392268" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.2411147146409771" />
+      <entry key="MS500" value="2.2075152451425177" />
+      <entry key="S2" value="3.5765278598387495" />
+      <entry key="S5" value="4.715355200459463" />
+      <entry key="S10" value="5.645015152385764" />
+      <entry key="S30" value="7.450309113232356" />
+      <entry key="S60" value="9.257758119221611" />
+      <entry key="M2" value="12.443853852066376" />
+      <entry key="M5" value="20.567296148944035" />
+      <entry key="M10" value="29.64706810943163" />
+      <entry key="M15" value="34.98926589315261" />
+      <entry key="M30" value="42.43117185873709" />
+      <entry key="H1" value="47.2417743445482" />
+      <entry key="H2" value="49.989986700574725" />
+      <entry key="H4" value="51.46055916746538" />
+      <entry key="D1" value="52.73849117346082" />
+      <entry key="W1" value="52.96251868285629" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.8020235297729414" />
+      <entry key="MS500" value="1.939503646013341" />
+      <entry key="S2" value="3.3263669479304645" />
+      <entry key="S5" value="4.82021653805192" />
+      <entry key="S10" value="6.367418662371343" />
+      <entry key="S30" value="10.370767282569894" />
+      <entry key="S60" value="15.511706858045383" />
+      <entry key="M2" value="25.294870766013673" />
+      <entry key="M5" value="50.04249766937813" />
+      <entry key="M10" value="78.30606301763758" />
+      <entry key="M15" value="95.48258896940993" />
+      <entry key="M30" value="120.03894842259582" />
+      <entry key="H1" value="136.26138560442695" />
+      <entry key="H2" value="145.64044005544423" />
+      <entry key="H4" value="150.69063054226996" />
+      <entry key="D1" value="155.09647514982197" />
+      <entry key="W1" value="155.87046029712127" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LjZE2Jze4qBqE1SBZMketErr2A" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.Ejercicio2Kt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.RectanguloKt.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alumno/Documents/2DAM/PMDM/Kotlin2_2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/alumno/Documents/2DAM/PMDM/Kotlin2_2/src/Main.kt&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alumno\Documents\2DAM\PMDM\Kotlin2_2" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-ac68fc9d2b05-intellij.indexing.shared.core-IU-263.7307.200" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a5274f3-0ba5-4e1d-9078-f4a8a84e4bb5" name="Changes" comment="" />
+      <created>1793969323709</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793969323709</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+  </component>
+</project>

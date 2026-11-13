@@ -133,7 +133,7 @@ mcc     # mvn clean compile
 mjr     # mvn javafx:run
 mdt     # mvn dependency:tree
 mt      # mvn test
-p       # abrir el proyecto de Móviles y arrancarlo
+p       # abrir el proyecto  de Móviles y arrancarlo
 ```
 
 Las rutas están en `$HOME\Documents\2DAM`, hay que cambiarlas si el repo está en otro sitio.
