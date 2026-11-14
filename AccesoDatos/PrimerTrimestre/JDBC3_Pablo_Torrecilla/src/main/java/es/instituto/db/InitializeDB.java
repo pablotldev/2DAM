@@ -15,18 +15,18 @@ public class InitializeDB {
   public static void initialize() throws IOException, SQLException {
     try (InputStream is = InitializeDB.class.getResourceAsStream("/db/schema.sql")) {
       if (is == null) {
-        throw new IOException("No existe el fichero en /resources/db/schema.sql");
+        throw new IOException("No existe el fichero en src/main/resources/db/schema.sql");
       }
       String script = new String(is.readAllBytes(), StandardCharsets.UTF_8);
       try (Connection con = ConnectionDB.getServerConnection();
           Statement stmt = con.createStatement()) {
 
         for (String line : script.split(";")) {
-          stmt.execute(line);
+          String sql = line.trim();
+          if (!sql.isEmpty())
+            stmt.execute(sql);
         }
       }
     }
-
   }
-
 }
