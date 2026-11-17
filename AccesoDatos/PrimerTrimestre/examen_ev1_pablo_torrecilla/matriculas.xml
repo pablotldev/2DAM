@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<matriculas>
+  <solicitud nombre="Nora Díaz" edad="21" ciclo="DAW" />
+  <solicitud nombre="Paula Ríos" edad="18" ciclo="ASIR" />
+  <solicitud nombre="Héctor Sáez" edad="20" ciclo="DAM" />
+</matriculas>

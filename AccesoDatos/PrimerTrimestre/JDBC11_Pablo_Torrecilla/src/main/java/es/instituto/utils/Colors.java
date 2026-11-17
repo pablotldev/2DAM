@@ -1,4 +1,4 @@
-package es.instituto.utils;
+package es.ies.utils;
 
 public final class Colors {
 

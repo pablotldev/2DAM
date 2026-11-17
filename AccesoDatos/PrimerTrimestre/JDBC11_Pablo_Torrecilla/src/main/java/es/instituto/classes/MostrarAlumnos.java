@@ -4,9 +4,9 @@ import java.sql.SQLException;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import es.ies.utils.Colors;
 import es.instituto.db.AlumnoDAO;
 import es.instituto.models.Alumno;
-import es.instituto.utils.Colors;
 
 public class MostrarAlumnos {
 

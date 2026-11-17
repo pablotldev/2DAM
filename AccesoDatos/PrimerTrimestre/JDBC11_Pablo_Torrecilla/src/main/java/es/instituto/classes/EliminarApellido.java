@@ -4,9 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import es.ies.utils.Colors;
+import es.ies.utils.Input;
 import es.instituto.db.AlumnoDAO;
-import es.instituto.utils.Colors;
-import es.instituto.utils.Input;
 
 public class EliminarApellido {
 

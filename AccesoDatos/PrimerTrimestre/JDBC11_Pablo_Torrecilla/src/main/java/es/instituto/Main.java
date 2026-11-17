@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.SQLException;
 
+import es.ies.utils.Colors;
+import es.ies.utils.Input;
 import es.instituto.classes.EliminarAlumno;
 import es.instituto.classes.EliminarApellido;
 import es.instituto.classes.InsertarAlumno;
@@ -15,8 +17,6 @@ import es.instituto.db.AlumnoDAO;
 import es.instituto.db.InitializeDB;
 import es.instituto.files.CSVAlumnos;
 import es.instituto.files.XMLAlumnos;
-import es.instituto.utils.Colors;
-import es.instituto.utils.Input;
 
 public class Main {
 
