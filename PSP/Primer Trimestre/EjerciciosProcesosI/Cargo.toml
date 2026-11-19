@@ -1,5 +1,5 @@
 [package]
-name = "random"
+name = "ej_procesos_1"
 version = "0.1.0"
 edition = "2024"
 
@@ -7,5 +7,9 @@ edition = "2024"
 name = "random"
 path = "src/ejercicio3/random.rs"
 
+[[bin]]
+name = "reader"
+path = "src/ejercicio5/reader.rs"
+
 [dependencies]
-rand = "0.9"
+rand = "0.10.4"

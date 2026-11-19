@@ -23,5 +23,4 @@ public class MayusculasHijo {
       System.err.println(Colors.RED + "Error de entrada/salida en el proceso hijo: " + e.getMessage());
     }
   }
-
 }
