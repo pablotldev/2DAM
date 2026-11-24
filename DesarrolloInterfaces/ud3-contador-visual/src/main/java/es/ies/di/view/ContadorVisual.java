@@ -12,8 +12,10 @@ public class ContadorVisual extends HBox {
   private final Button botonMenos = new Button(" - ");
   private final Label etiquetaValor = new Label();
   private final Button botonMas = new Button(" + ");
+  private final Button botonReiniciar = new Button(" Reiniciar ");
   // Un int guarda un valor, IntegerProperty guarda un valor y además puede avisar de cambios y enlazarlas con otras propiedades (bindings y listeners)
   private final IntegerProperty valor = new SimpleIntegerProperty(0);
+  private final int RESET = 0;
 
   public ContadorVisual() {
 
@@ -24,8 +26,10 @@ public class ContadorVisual extends HBox {
 
     botonMas.setOnAction(e -> incrementar());
     botonMenos.setOnAction(e -> decrementar());
+    botonReiniciar.setOnAction(e -> reiniciar());
+    botonReiniciar.setTextFill(Color.PURPLE);
 
-    getChildren().addAll(botonMenos, etiquetaValor, botonMas);
+    getChildren().addAll(botonMenos, etiquetaValor, botonMas, botonReiniciar);
     setAlignment(Pos.CENTER);
 
   }
@@ -48,6 +52,10 @@ public class ContadorVisual extends HBox {
 
   public IntegerProperty valorProperty() {
     return this.valor;
+  }
+
+  private void reiniciar() {
+    setValor(0);
   }
 
 }

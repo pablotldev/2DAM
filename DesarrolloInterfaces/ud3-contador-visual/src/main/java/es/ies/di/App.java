@@ -10,6 +10,10 @@ import javafx.stage.Stage;
 
 public class App extends Application {
 
+    private static void name() {
+
+    }
+
     @Override
     public void start(Stage stage) throws Exception {
 
@@ -29,6 +33,7 @@ public class App extends Application {
         // Etiqueta: Segundo contador
         // Componente: Segundo contador
         // Etiqueta: Estado del primer contador
+        // Botón para reiniciar
         VBox raiz = new VBox(15, titulo, new Label("Primer contador: "), c1,
                 new Label("Segundo contador:"), c2, estado);
 
@@ -37,7 +42,7 @@ public class App extends Application {
         // La escena que contiene todos los elementos visuales que se mostrarán en la ventana (tamaño 400x300)
         Scene escena = new Scene(raiz, 400, 300);
 
-        // Indicamos la escena a mostrar dentro del stage (que es la ventana)
+        // Indicamos la escena a mostrar dentro del stage (que es lña ventana)
         stage.setScene(escena);
 
         stage.setTitle("UD3 - Contador Visual");
