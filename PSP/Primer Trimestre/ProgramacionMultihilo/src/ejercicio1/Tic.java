@@ -1,11 +1,13 @@
 package ejercicio1;
 
+import utils.Colors;
+
 public class Tic extends Thread {
 
   private void tic() {
     try {
       while (true) {
-        System.out.print("\u001B[32mTIC ");
+        System.out.print(Colors.GREEN + "TIC ");
         Thread.sleep(1000);
       }
     } catch (InterruptedException e) {

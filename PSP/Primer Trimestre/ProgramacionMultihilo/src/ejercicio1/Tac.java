@@ -1,12 +1,14 @@
 package ejercicio1;
 
+import utils.Colors;
+
 public class Tac extends Thread {
 
   private void tac() {
     try {
       Thread.sleep(500);
       while (true) {
-        System.out.print("\u001B[34mTAC ");
+        System.out.print(Colors.BLUE + "TAC ");
         Thread.sleep(1000);
       }
     } catch (InterruptedException e) {
